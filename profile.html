@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            }
+
+        .profile-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            width: 330px;
+            text-align: center;
+        }
+
+        .profile-header {
+            background-color: #000;
+            color: white;
+            padding: 40px 20px 20px;
+            position: relative;
+        }
+
+        .profile-img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border: 3px solid white;
+            position: absolute;
+            top: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            float: right;
+            }
+
+        .profile-name {
+            margin-top: 80px;
+            font-size: 24px;
+        }
+
+        .profile-title {
+            margin: 0;
+            font-size: 16px;
+            opacity: 0.8;
+        }
+
+        .profile-body {
+            padding: 20px;
+            color: #333;
+        }
+
+        .profile-bio {
+            margin: 0;
+        }
+
+        .profile-footer {
+            background-color: #000;
+            color: #006cff;
+            padding: 10px 20px;
+            border-top: 1px solid #fff;
+            border-radius: 0%;
+        }
+
+        .profile-link {
+            text-decoration: none;
+            color: #fff;
+            background-color: #000;
+            margin: 0 2px;
+            font-weight: bold;
+            border: 10px solid #000;
+            border-radius: 40px;
+        }
+
+        .profile-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-card">
+        <div class="profile-header">
+            <img src="avatar.jpg" alt="Profile Image" class="profile-img">
+            <h2 class="profile-name">Khaled Khamis</h2>
+            <p class="profile-title">Front-end developer</p>
+        </div>
+        <div class="profile-body">
+            <p class="profile-bio">Passionate coder with experience in web development, desktop engineering, and AI.</p>
+        </div>
+        <div class="profile-footer">
+            <a href="https://www.facebook.com/profile.php?id=100094142962050&mibextid=ZbWKwL" class="profile-link">Facebook</a>
+            <a href="https://x.com/KhaledKhamis40?t=iych2i4vdsU7QZi6IZr9AQ&s=09" class="profile-link">Twitter</a>
+            <a href="https://wa.me/qr/DAZWUYQTNFJKP1" class="profile-link">Whatsapp</a>
+        </div>
+    </div>
+</body>
+</html>

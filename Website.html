@@ -1,0 +1,59 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <meta charset="UTF-8" /> 
+    <title>BookHub</title> 
+    <link rel="stylesheet" href="style.css" type="text/css"> 
+    
+     
+</head> 
+<body> 
+    <header> 
+        <p class="p1">BookHub</p><p class="p2">D.B: Khaled Khamis</p> 
+        
+    </header> 
+   
+    <div class="navbar"> 
+        <div> 
+          <a href="index.html">MainPage</a> 
+        </div> 
+          <hr class="line"/> 
+        <div> 
+          <a href="#" id="search">Search</a> 
+        </div> 
+          <hr class="line"/> 
+        <div> 
+          <a href="login_page.html">logIn</a> 
+        </div> 
+    </div> 
+ 
+    <!-- Button to open modal --> 
+    <div class="append_book_bt" id="openModal">append a book</div> 
+ 
+    <!-- Modal --> 
+    <div id="myModal" class="modal"> 
+        <div class="modal-content"> 
+            <span class="close" id="closeModal">&times;</span> 
+            <h2>Append a new book</h2> 
+            <form id = 'bookForm'> 
+                <label for="book-title">Book Title:</label><br> 
+                <input type="text" id="book-title" name="book-title"><br><br>
+
+                <label for="book-writer">Book writer:</label><br> 
+                <input type="text" id="book-writer" name="book-writer"><br><br>
+
+                <label for="book-img">Book image:</label><br>
+                <input type="file" id="book-img" name="book-img" accept="image/*"><br><br> 
+
+                <button type="submit">Add Book</button> 
+            </form> 
+        </div> 
+    </div> 
+         
+    <script src="main.js"></script> 
+
+     
+     
+     
+</body> 
+</html>

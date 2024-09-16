@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>login_page</title>
+    <style>
+        @font-face {
+            font-family: "myfont";
+            src: url("GustatoryDelightRegular-rgX3L.ttf");
+        }
+
+        @font-face {
+            font-family: "myfont2";
+            src: url("Autumn in November.ttf");
+        }
+
+        @font-face {
+            font-family: "myfont3";
+            src: url("GustatoryDelightRegular-rgX3L.ttf");
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+            background-image: url(Wall1.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 1.3em;
+            padding: 11px;
+            color: white;
+
+        }
+
+        .login_card {
+            border-radius: 10px;
+            padding: 10px;
+            padding-top: -6px;
+            /*
+            margin-top: -3%;
+            margin-right: 50%;
+            */
+            width: 350px;
+            max-width: 90%;
+            font-size: 1.4em;
+            backdrop-filter: blur(1px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s, opacity 0.3s;
+        }
+
+        legend {
+            color: #fff;
+            text-align: center;
+            font-family: "myfont";
+            pointer-events: none;
+            /* change_botoomd justify-content and align-items to text-align */
+        }
+
+        label {
+            display: block;
+            color: #fff;
+            font-family: "myfont";
+            font-size: 1.2em;
+            transition: color 0.3s;
+            /*transform: translateY(20px);*/
+            pointer-events: none;
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            background: transparent;
+            border: 2px solid transparent;
+            outline: none;
+            font-family: "myfont2", serif;
+            font-size: 1.7em;
+            color: #492a09;
+            padding: 5px;
+            box-sizing: border-box;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        input[type="email"]:focus,
+        input[type="password"]:focus {
+            border-color: #492a09;
+            box-shadow: 0 0 10px #15192a;
+        }
+
+        .login {
+            width: 100%;
+            background-color: #492a09;
+            color: #fff;
+            font-size: 1.5em;
+            padding: 10px;
+            border-radius: 10px;
+            font-family: "myfont3", serif;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .login:hover {
+            background-color: #000;
+            transform: scale(1.03);
+        }
+        @media (max-width: 1000px) {
+            body{
+                height: 100vh;
+                background-image: url(1.jpg);
+            }
+            .login_card{
+                width: 70%;
+                backdrop-filter: blur(5px);
+
+            }
+            legend, label{
+                color: #041807;
+                font-size: 3em;
+            }
+            .login{
+                background-color: #071a0a;
+                font-size: 3em;
+            }
+            input[type="email"],
+            input[type="password"]{
+                font-size: 3em;
+                padding: 10px;
+                color: #041807;
+            }
+            input[type="email"]:focus,
+            input[type="password"]:focus{
+                border-color: #041807;
+                box-shadow: 0 0 10px #15192a;
+
+        }
+        }
+    </style>
+
+</head>
+
+<body>
+    <fieldset class="login_card"></input>
+        <legend>
+            <h1>login</h1>
+        </legend>
+        <label>Email: </label><input type="email" />
+        <hr color="black" />
+        <label>Password: </label><input type="password" />
+        <hr color="black" />
+        <input type="submit" value="Login" class="login" />
+    </fieldset>
+
+</body>
+
+</html>

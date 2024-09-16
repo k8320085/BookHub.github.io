@@ -1,0 +1,243 @@
+@font-face {
+  font-family: "myfont";
+  src: url("GustatoryDelightRegular-rgX3L.ttf");
+}
+
+@font-face {
+  font-family: "myfont2";
+  src: url("Autumn in November.ttf");
+}
+
+@font-face {
+  font-family: "myfont3";
+  src: url("mbc-arabic-font.ttf");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: linear-gradient(80deg, #fff, #000);
+  width: 100%;
+}
+
+header{
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  padding: 20px 0 10px 0;
+  margin-top: 0;
+  margin-bottom: 1px;
+  display: flex;
+}
+.p1{
+  font-family: "myfont2";
+  font-size: 2.7em;
+  margin-left: 42%;
+
+  
+
+}
+.p2{
+  font-size: 1.5em;
+  font-family: "myfont";
+  margin-top: 6%;
+
+}
+
+.navbar {
+  width: 100%;
+  background-color: #000000;
+  padding: 10px 0 10px 0;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0px;
+}
+.navbar div, hr {
+  margin: 0 30px 0 30px;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "myfont";
+  font-size: 3.7em;
+}
+
+#search{
+  font-family: 'myfont2';
+  font-size: 2.6em;
+}
+
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.book {
+  background-color: #fff;
+  width: 12%;
+  height: auto;
+  padding: 15px;
+  border: 1px solid black;
+  color: #000;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #000;
+  margin-top: 38px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(100px) scale(1);
+  animation: slideUp 1.5s ease forwards;
+  transition: transform 0.3s ease-in-out, opacity 1.5s ease-in-out;
+}
+
+.rating {
+  font-size: 24px;
+  color: #FFD700;
+  margin-bottom: 0;
+}
+.writer{
+  margin-bottom: 0px;
+  margin-top: 0px;
+  font-family: 'myfont3', 'Arial Narrow Bold';
+  font-size: 1.3em;
+}
+
+img{
+  height: 75%;
+  width: 70%;
+  border-radius: 5px;
+  padding: 4px;
+  border: 1px solid black;
+}
+
+
+.title {
+  font-family: "myfont3";
+  font-size: 1.4em;
+  color: black;
+  margin-top: 5px;
+}
+
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1;
+    left: 0;
+    top: 0;
+    font-family: 'myfont2';
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%; /* Could be more or less, depending on screen size */
+    text-align: center;
+}
+
+.close {
+    color: #000;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+}
+
+.append_book_bt, #searchBar {
+    align-items: center;
+    text-align: center;
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 2em;
+    font-family: 'myfont2';
+}
+#searchBar{
+  background-color: #fff;
+  color: #000;
+}
+
+.append_book_bt:hover {
+    background-color: #333;
+    transform: scale(1.07);
+
+}
+/* Media query adjustments */
+@media (max-width: 1000px) {
+  body {
+    height: 100vh;
+  }
+  .book {
+    width: 40%;
+    padding-top: 30px;
+    height: auto;
+    display: flex;
+    font-size: 2em;
+  }
+  header{
+    font-size: 2em;
+
+  }
+  .p1{
+    margin-left: 30%;
+
+  }
+  .p2{
+    font-size: 1em;
+  }
+  .modal-content{
+    height: 55%;
+    font-size: 3em;
+    width: 90%;
+    margin-top: 50%;
+
+  }
+  .modal-content input{
+    font-size: 1em;
+  }
+  .modal-content input[type='file']{
+    margin-left: 20%;
+    margin-top: 20px;
+  }
+  .modal-content button{
+    transform: scale(4);
+  }
+
+
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(200px) scale(1); 
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }}
+
+.book:hover, .append_book_bt:hover{
+  background-color: #655a5a;
+}

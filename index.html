@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome</title>
+    <style>
+      @font-face {
+        font-family: "myfont";
+        src: url("GustatoryDelightRegular-rgX3L.ttf");
+      }
+
+      @font-face {
+        font-family: "myfont2";
+        src: url("Autumn in November.ttf");
+      }
+      @font-face {
+        font-family: "myfont3";
+        src: url("FiraCode-Bold.ttf");
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(80deg, #fff, #000);
+        height: 100vh;
+        width: 100%;
+      }
+      .navbar {
+        width: 100%;
+        height: 7%;
+        background-color: black;
+        padding: 10px 0 10px 0;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 0px;
+      }
+      .navbar hr {
+        border: 1px solid white;
+        height: 100%;
+        margin: 0 30px 0 30px;
+      }
+
+      .title {
+        font-family: "myfont";
+        font-size: 2em;
+        color: #fff;
+        margin-top: 0;
+      }
+      a {
+        text-decoration: none;
+        color: #fff;
+        font-family: "myfont";
+        font-size: 2em;
+      }
+
+      .container {
+        width: 40%;
+        height: auto;
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-top: 10px;
+        margin-left: 25%;
+        text-align: center;
+        justify-content: center;
+        font-family: "myfont";
+      }
+
+      h1 {
+        font-size: 3rem;
+        color: #000;
+      }
+      .hub {
+        height: 1.3em;
+        width: 2em;
+        font-family: "myfont";
+        font-size: 2em;
+        background-color: #fff;
+        color: #000;
+        margin-right: 67%;
+        border-radius: 10%;
+        padding: 0;
+        margin-left: 9px;
+        top: 0;
+      }
+      .hub p {
+        margin: 0;
+      }
+
+      .text span {
+        display: block;
+        font-size: 2em;
+        color: #000;
+        border-right: 2px solid #666;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 0;
+        font-family: "myfont3";
+        animation: typing 4s steps(40, end) forwards, blink-caret 0.75s step-end;
+      }
+      .text span:nth-child(1) {
+        animation-delay: 0s;
+      }
+      .text span:nth-child(2) {
+        animation-delay: 2s;
+      }
+      .text span:nth-child(3) {
+        animation-delay: 4s;
+      }
+      .text span:nth-child(4) {
+        animation-delay: 6s;
+      }
+      .text span:nth-child(5) {
+        animation-delay: 8s;
+      }
+      .text span:nth-child(6) {
+        animation-delay: 10s;
+      }
+
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+
+      @keyframes blink-caret {
+        from,
+        to {
+          border-color: transparent;
+        }
+        50% {
+          border-color: #666;
+        }
+      }
+
+      .btn {
+        background-color: #000;
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-top: 20px;
+      }
+
+      .btn:hover {
+        background-color: #373e44;
+      }
+      .link {
+        text-decoration: none;
+        color: white;
+      }
+      @media (max-width: 700px) {
+        .container{
+            width: 69%;
+            margin-top: 80px;
+            margin-left: 5%;
+            
+        }
+        h1{
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        .text span{
+            font-size: 1em;
+        }
+        .navbar{
+            height: 3%;
+
+        }
+        .hub{
+            margin-right: 10%;
+            font-size: 1.5em;
+        }
+        a{
+            font-size: 1.5em;
+
+        }
+        .title{
+            font-size: 1.5em;
+        }
+
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <p class="title">Book</p>
+      <div class="hub"><p>Hub</p></div>
+      <div>
+        <a href="profile.html">Me</a>
+      </div>
+      <hr class="line" />
+      <div>
+        <a href="Website.html">Books</a>
+      </div>
+      <hr class="line" />
+      <div>
+        <a href="login_page.html">log in</a>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Welcome to BookHub!</h1>
+      <div class="text">
+        <span>Hi! Iam Khaled Khamis</span>
+        <span>And this is my Own library,</span>
+        <span>I know It's not a biggest</span>
+        <span>library ever</span>
+        <span>,But Someone can like this</span>
+        <span>Only Enjoy!</span>
+      </div>
+
+      <button class="btn">
+        <a href="website.html" class="link">Get Started</a>
+      </button>
+    </div>
+  </body>
+</html>
