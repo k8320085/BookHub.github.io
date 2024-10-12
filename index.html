@@ -21,15 +21,16 @@
       body {
         margin: 0;
         padding: 0;
-        background: linear-gradient(80deg, #fff, #000);
+        background: linear-gradient(50deg, #062139, #000, #062139);
         height: 100vh;
         width: 100%;
       }
       .navbar {
         width: 100%;
         height: 7%;
-        background-color: black;
+        background-color: transparent;
         padding: 10px 0 10px 0;
+        border-bottom: #fff solid 2px;
         display: flex;
         text-align: center;
         justify-content: center;
@@ -58,7 +59,7 @@
       .container {
         width: 40%;
         height: auto;
-        background-color: rgba(255, 255, 255, 0.9);
+        background-color: #000;
         padding: 40px;
         border-radius: 15px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -67,11 +68,16 @@
         text-align: center;
         justify-content: center;
         font-family: "myfont";
+        scale: 0.7;
+        
+      }
+      .container:hover{
+        scale: 0.9;
       }
 
       h1 {
         font-size: 3rem;
-        color: #000;
+        color: #fff;
       }
       .hub {
         height: 1.3em;
@@ -93,8 +99,8 @@
       .text span {
         display: block;
         font-size: 2em;
-        color: #000;
-        border-right: 2px solid #666;
+        color: #fff;
+/*         border-right: 2px solid #666; */
         white-space: nowrap;
         overflow: hidden;
         width: 0;
@@ -103,6 +109,7 @@
       }
       .text span:nth-child(1) {
         animation-delay: 0s;
+        border-right: 0;
       }
       .text span:nth-child(2) {
         animation-delay: 2s;
@@ -129,15 +136,7 @@
         }
       }
 
-      @keyframes blink-caret {
-        from,
-        to {
-          border-color: transparent;
-        }
-        50% {
-          border-color: #666;
-        }
-      }
+
 
       .btn {
         background-color: #000;
@@ -157,7 +156,7 @@
         text-decoration: none;
         color: white;
       }
-      @media (max-width: 700px) {
+      @media (max-width: 1000px) {
         .container{
             width: 69%;
             margin-top: 80px;
@@ -218,7 +217,7 @@
       </div>
 
       <button class="btn">
-        <a href="Website.html" class="link">Get Started</a>
+        <a href="website.html" class="link">Get Started</a>
       </button>
     </div>
   </body>

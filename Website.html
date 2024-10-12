@@ -1,59 +1,109 @@
-<!DOCTYPE html> 
-<html> 
-<head> 
-    <meta charset="UTF-8" /> 
-    <title>BookHub</title> 
-    <link rel="stylesheet" href="style.css" type="text/css"> 
-    
-     
-</head> 
-<body> 
-    <header> 
-        <p class="p1">BookHub</p><p class="p2">D.B: Khaled Khamis</p> 
-        
-    </header> 
-   
-    <div class="navbar"> 
-        <div> 
-          <a href="index.html">MainPage</a> 
-        </div> 
-          <hr class="line"/> 
-        <div> 
-          <a href="#" id="search">Search</a> 
-        </div> 
-          <hr class="line"/> 
-        <div> 
-          <a href="login_page.html">logIn</a> 
-        </div> 
-    </div> 
- 
-    <!-- Button to open modal --> 
-    <div class="append_book_bt" id="openModal">append a book</div> 
- 
-    <!-- Modal --> 
-    <div id="myModal" class="modal"> 
-        <div class="modal-content"> 
-            <span class="close" id="closeModal">&times;</span> 
-            <h2>Append a new book</h2> 
-            <form id = 'bookForm'> 
-                <label for="book-title">Book Title:</label><br> 
-                <input type="text" id="book-title" name="book-title"><br><br>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>BookHub</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <style>
+        .loader-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
 
-                <label for="book-writer">Book writer:</label><br> 
-                <input type="text" id="book-writer" name="book-writer"><br><br>
+        #content {
+            display: none;
+        }
+    </style>
+</head>
+<body>
 
-                <label for="book-img">Book image:</label><br>
-                <input type="file" id="book-img" name="book-img" accept="image/*"><br><br> 
+    <!-- شاشة تحميل Lottie -->
+    <div class="loader-wrapper" id="loader-wrapper">
+        <dotlottie-player src="https://lottie.host/44419f77-7433-4de2-a9fb-579753013b38/VI66p4v0mT.json" background="transparent" speed="1" style="width: 700px; height: 700px;" loop autoplay></dotlottie-player>
+    </div>
 
-                <button type="submit">Add Book</button> 
-            </form> 
-        </div> 
-    </div> 
-         
-    <script src="main.js"></script> 
+    <!-- المحتوى الرئيسي للموقع -->
+    <div id="content">
+        <header>
+            <p class="p1">BookHub</p><p class="p2">D.B: Khaled Khamis</p>
+        </header>
 
-     
-     
-     
-</body> 
+        <div class="navbar">
+            <div>
+                <a href="index.html">MainPage</a>
+            </div>
+            <hr class="line"/>
+            <div>
+                <a href="#" id="search">Search</a>
+            </div>
+            <hr class="line"/>
+            <div>
+                <a href="login_page.html">logIn</a>
+            </div>
+        </div>
+
+        <!-- Button to open modal -->
+        <div class="append_book_bt" id="openModal">Append a book</div>
+
+        <!-- Modal for Adding a Book -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="closeModal">&times;</span>
+                <h2>Append a new book</h2>
+                <form id="bookForm">
+                    <label for="book-title">Book Title:</label><br>
+                    <input type="text" id="book-title" name="book-title"><br><br>
+
+                    <label for="book-writer">Book writer:</label><br>
+                    <input type="text" id="book-writer" name="book-writer"><br><br>
+
+                    <label for="book-img">Book image:</label><br>
+                    <input type="file" id="book-img" name="book-img" accept="image/*"><br><br>
+
+                    <button type="submit">Add Book</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Modal for Book Details -->
+        <div id="bookDetailModal" class="modal">
+            <div class="modal-content2" id="modal-content2">
+                <span class="close" id="closeDetailModal">&times;</span>
+                <img id="modalBookImage" src="" alt="Book Image">
+                <h1 id="modalBookTitle">Book Title</h1>
+                <h2 id="modalBookWriter">Book Writer</h2>
+                <h2 id="modalBookRating">Book Rating</h2>
+
+                <br><br>
+                <a id="downloadLink">
+                    <button>Preview an Download</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+
+    <script>
+        // إخفاء شاشة التحميل بعد فترة وعرض المحتوى
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                // إخفاء Lottie
+                document.querySelector('.loader-wrapper').style.display = 'none';
+
+                document.getElementById('content').style.display = 'block';
+            }, 3000); // يمكن تعديل المدة هنا
+        });
+    </script>
+
+</body>
 </html>

@@ -17,7 +17,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  background-color: linear-gradient(80deg, #fff, #000);
+  background-color: linear-gradient(50deg, #062139, #000, #062139);
   width: 100%;
 }
 
@@ -94,11 +94,12 @@ a {
   transform: translateY(100px) scale(1);
   animation: slideUp 1.5s ease forwards;
   transition: transform 0.3s ease-in-out, opacity 1.5s ease-in-out;
+  margin-bottom: 20px;
 }
 
 .rating {
   font-size: 24px;
-  color: #FFD700;
+  color: #000;
   margin-bottom: 0;
 }
 .writer{
@@ -137,9 +138,9 @@ img{
     background-color: rgba(0, 0, 0, 0.5); 
 }
 
-.modal-content {
+.modal-content, .modal-content2 {
     background-color: #fff;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 5% auto; /* 15% from the top and centered */
     padding: 20px;
     border-radius: 10px;
     width: 50%; /* Could be more or less, depending on screen size */
@@ -157,6 +158,17 @@ img{
 .close:hover,
 .close:focus {
     color: red;
+}
+#downloadLink{
+  color :#000;
+  border: #000 solid 2px;
+  border-radius: 6px;
+  padding: 10px;
+  padding-right: 17px;
+}
+#modalBookImage{
+  max-width: 40%; 
+  height: auto;
 }
 
 .append_book_bt, #searchBar {
@@ -184,10 +196,15 @@ img{
     transform: scale(1.07);
 
 }
-/* Media query adjustments */
+#bookDetailModal .modal-content2 {
+    width: 50%;
+    text-align: center;
+    font-family: "myfont3";
+}
 @media (max-width: 1000px) {
   body {
     height: 100vh;
+    width: 100%;
   }
   .book {
     width: 40%;
@@ -198,7 +215,11 @@ img{
   }
   header{
     font-size: 2em;
+    width: 100%;
 
+  }
+  .navbar{
+      width: 100%;
   }
   .p1{
     margin-left: 30%;
@@ -206,6 +227,20 @@ img{
   }
   .p2{
     font-size: 1em;
+  }
+  .modal-content2{
+    margin-top: 40%;
+    height: auto;
+    font-size: 2em;
+    max-width: 100%;
+  }
+  #modalBookImage{
+    margin: 0;
+    max-width: 100%;
+    height: auto;
+  }
+  #downloadLink{
+    font-size: 1.5em;
   }
   .modal-content{
     height: 55%;
